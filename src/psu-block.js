@@ -10,6 +10,7 @@ class PsuBlock extends LitElement {
   static styles = css`
     :host {
       display: inline-block;
+      margin-left: 25px;
     }
 
     .info-block1 {
