@@ -14,7 +14,7 @@ class PsuBlock extends LitElement {
   static styles = css`
     :host {
       display: inline-block;
-      margin-left: 25px;
+      margin-left: 55px;
     }
 
     .info-block1 {
@@ -37,6 +37,17 @@ class PsuBlock extends LitElement {
       height: 342.250px;
       text-align: center;
       font-size: 32px;
+    }
+
+    .info-block2 b {
+      padding-top: 0px;
+      padding-right: 14%;
+      padding-bottom: 0px;
+      padding-left: 14%;
+      background-color: #1e407c;
+      height: 3px;
+      font-weight: 700;
+      display: block;
     }
 
     .info-block3 {
@@ -123,6 +134,14 @@ class PsuBlock extends LitElement {
       font-size: 32px;
     }
 
+    .image{
+      margin-top: 20px;
+      padding: 0px 14px 0px 14px;
+      width: 375px;
+      height: 342.250px;
+      text-align: center;
+    }
+
     .block-container {
       display: grid;
       grid-gap: 325px;
@@ -136,7 +155,8 @@ class PsuBlock extends LitElement {
     super();
     this.header = 'My app';
     this.infoText1 = "88,000+ Students"
-    this.infoText2 = "58% of the population from Penn";
+    this.infoText2 = "58%";
+    this.infoText21 = "Of students are Pennsylvania residents."
     this.infoText3 = "Students from 50 states and 145 Countries";
     this.infoText4 = "Check out Undergraduate Admissions statistics";
   }
@@ -149,11 +169,14 @@ class PsuBlock extends LitElement {
         </div>
         <div class="info-block2">
           <h2>${this.infoText2}</h2>
+          <b></b>
+          <p> ${this.infoText21}</p>
         </div>
-        <div class="info-block3">
+        <div class="info-block3" style="background-color: rgb(30,64,124); background: -moz-linear-gradient(180deg, rgba(30,64,124,1) 0%, rgba(0,30,68,1) 65%, rgba(0,30,68,1) 100%); background: -webkit-linear-gradient(180deg, rgba(30,64,124,1) 0%, rgba(0,30,68,1) 65%, rgba(0,30,68,1) 100%); background: linear-gradient(180deg, rgba(30,64,124,1) 0%, rgba(0,30,68,1) 65%, rgba(0,30,68,1) 100%);; ">
           <h2>${this.infoText3}</h2>
         </div>
         <div class="info-block4">
+          <img class="image" src="https://www.psu.edu/psu-edu-assets/images/power-facts/penn-state-tuition.jpg"/>
           <h2>${this.infoText4}</h2>
         </div>
         <div class="info-block5">
