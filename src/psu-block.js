@@ -2,27 +2,25 @@ import { LitElement, html, css } from 'lit';
 
 class PsuBlock extends LitElement {
   static properties = {
-    header: { type: String },
+    
     infoText1: {type: String},
     infoText2: {type: String},
-    infoText21: {type: String},
-    infoText3: {type: String},
-    infoText4: {type: String},
-    infoText5: {type: String},
-    infoText6: {type: String},
-    infoText7: {type: String},
-    infoText8: {type: String},
-    infoText9: {type: String},
-    infoText10: {type: String},
+    gearBlock: {type: Boolean, reflect: true},
+    block1: {type: Boolean, reflect: true},
+    block2: {type: Boolean, reflect: true},
+    block3: {type: Boolean, relflect: true},
+    block4: {type: Boolean, reflect: true},
+    block5: {type: Boolean, reflect: true}
+
   }
 
   static styles = css`
     :host {
-      display: inline-block;
+      display: block;
       margin-left: 55px;
     }
 
-    .infoBlock1 {
+    :host([block1]) .block {
       background-color: #1e407c;
       padding: 100px 14px 0px 14px;
       background-size: cover;
@@ -37,13 +35,13 @@ class PsuBlock extends LitElement {
       font-size: 32px;
     }
 
-    .infoBlock1 h3{
+    :host([block1]) .block .infoBlock1{
       padding: 0 14%;
       margin-top: 100px;
       font-size: 2.25rem;
     }
 
-    .infoBlock2 {
+    :host([block2]) .block {
       margin-top: 20px;
       background-color: #fff;
       padding: 0px 14px 0px 14px;
@@ -53,14 +51,14 @@ class PsuBlock extends LitElement {
       font-size: 32px;
     }
 
-    .infoBlock2 h3{
+    :host([block2]) .block h3{
       text-align: left;
       color: #001e44;
       margin: 20% 0 0;
       font-size: 2.25rem;
     }
 
-    .infoBlock2 p {
+    :host([block2]) .block p {
       color: #001e44;
       font-size: 1.5rem;
       line-height: 1.5rem;
@@ -68,7 +66,7 @@ class PsuBlock extends LitElement {
       text-align: left;
     }
 
-    .infoBlock2 b {
+    :host([block2]) .block b {
       padding-top: 0px;
       padding-right: 14%;
       padding-bottom: 0px;
@@ -79,7 +77,7 @@ class PsuBlock extends LitElement {
       display: block;
     }
 
-    .infoBlock3 {
+    :host([block3]) .block {
       margin-top: 20px;
       background-color: #1e407c;
       padding: 0px 14px 0px 14px;
@@ -94,7 +92,7 @@ class PsuBlock extends LitElement {
       background: linear-gradient(180deg, rgba(30,64,124,1) 0%, rgba(0,30,68,1) 65%, rgba(0,30,68,1) 100%);
     }
 
-    .infoBlock3 h3 {
+    :host([block3]) .block h3 {
       padding: 0 14%;
       margin-top: 100px;
       font-size: 2.25rem;
@@ -122,7 +120,7 @@ class PsuBlock extends LitElement {
       font-size: 2.25rem;
     }
 
-    .infoBlock5 {
+    :host([block1]) .block {
       margin-top: 20px;
       background-color: #1e407c;
       padding: 0px 14px 0px 14px;
@@ -223,37 +221,35 @@ class PsuBlock extends LitElement {
       font-size: 2.25rem;
     }
 
-    .block-container {
-      display: grid;
-      grid-gap: 325px;
-      grid-template-columns: repeat(3, 125px);
-      grid-template-rows: repeat(3, 50px);
-    }
-
   `;
 
   constructor() {
     super();
-    this.infoText1 = "88,000+ Students";
-    this.infoText2 = "58%";
-    this.infoText21 = "Of students are Pennsylvania residents.";
-    this.infoText3 = "Students from 50 states and 145 Countries";
-    this.infoText4 = "Check out Undergraduate Admissions statistics";
-    this.infoText5 = "Nearly 10,000 international students"
-    this.infoText6 = "39%";
-    this.infoText7 = "Of students are from diverse backgrounds.";
-    this.infoText8 = "7,900+ faculty across all campuses";
-    this.infoText9 = "759,000+ alumni";
-    this.infoText10 = "See Penn State's Data Digest dashboards";
+    this.infoText1 = this.infoText1 || "default";
+    this.infoText2 = this.infoText2 || "default";
+
+    // this.infoText2 = "58%";
+    // this.infoText21 = "Of students are Pennsylvania residents.";
+    // this.infoText3 = "Students from 50 states and 145 Countries";
+    // this.infoText4 = "Check out Undergraduate Admissions statistics";
+    // this.infoText5 = "Nearly 10,000 international students"
+    // this.infoText6 = "39%";
+    // this.infoText7 = "Of students are from diverse backgrounds.";
+    // this.infoText8 = "7,900+ faculty across all campuses";
+    // this.infoText9 = "759,000+ alumni";
+    // this.infoText10 = "See Penn State's Data Digest dashboards";
   }
 
   render() {
     return html`
-      <div class="block-container">
+      <div class="block">
         <div class="infoBlock1">
           <h3>${this.infoText1}</h3>
+            <p>${this.gearBlock ? html`<b></b> <p> ${this.infoText2} </p>` : html` `}</p>
         </div>
-        <div class="infoBlock2">
+      </div>
+
+        <!-- <div class="infoBlock2">
           <h3>${this.infoText2}</h3>
           <b></b>
           <p> ${this.infoText21}</p>
@@ -281,7 +277,7 @@ class PsuBlock extends LitElement {
         <div class="infoBlock9">
           <h3>${this.infoText10}</h3>
         </div>
-      </div>
+      </div> -->
     `;
   }
 }
