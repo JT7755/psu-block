@@ -26,18 +26,26 @@ class PsuBlock extends LitElement {
 
     :host([block1]) .block {
       background-color: #1e407c;
-      padding: 100px 14px 0px 14px;
+      padding: 0px 14px 0px 14px;
       background-size: cover;
       background-position: center;
       background-blend-mode: multiply;
       margin-top: 20px;
       position: relative;
-      padding: 0px 14px 0px 14px;
       width: 375px;
       height: 342.250px;
       color: white;
       font-size: 32px;
     }
+
+    /* :host([block1]) .block .infoBlock h3 {
+      display: block;
+      padding: 0 3.75rem;
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    } */
 
     :host([block2]) .block {
       margin-top: 20px;
@@ -83,6 +91,15 @@ class PsuBlock extends LitElement {
       font-size: 32px;     
       background: linear-gradient(180deg, rgba(30,64,124,1) 0%, rgba(0,30,68,1) 65%, rgba(0,30,68,1) 100%);
     }
+
+    /* :host([block3]) .block h3 {
+      display: block;
+      padding: 0 3.75rem;
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    } */
 
     :host([block4]) .block {
       background-color: rgba(0, 3, 33, 0.5); 
@@ -144,6 +161,10 @@ class PsuBlock extends LitElement {
       background-blend-mode: multiply;
     }
 
+    /* :host([block7]) .block .infoBlock h3 {
+      padding: 0 14%;
+    } */
+
     :host([block8]) .block {
       margin-top: 20px;
       background-color: #001e44; 
@@ -157,6 +178,10 @@ class PsuBlock extends LitElement {
       background-position: center;
       background-blend-mode: multiply;
     }
+
+    /* :host([block8]) .block .infoBlock h3 {
+      padding: 0 14%;
+    } */
 
     :host([block9]) .block {
       margin-top: 20px;
