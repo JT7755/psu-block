@@ -23,12 +23,21 @@ class PsuBlock extends LitElement {
 
   static styles = css`
     :host {
-      display: block;
+      Display: block;
+      --beaverblue: #1e407c;
+      --whiteout: #fff;
+      --nittanynavy: #001e44;
+      --darkgrey: #00032180;
+      --blockwidth: 369.719px;
+      --blockheight: 315.750px;
+      --fontsize: 32px;
+      --fontweight: 700;
+      --fontfam: "Roboto", sans-serif;
       margin-left: 65px;
     }
 
     :host([block1]) .block {
-      background-color: #1e407c;
+      background-color: var(--beaverblue);
       background-size: cover;
       background-position: center;
       background-blend-mode: multiply;
@@ -43,7 +52,7 @@ class PsuBlock extends LitElement {
     :host([block1]) .infoBlock h3 {
       padding-right: 14%;
       padding-left: 14%;
-      padding-top: 14%;
+      padding-top: 25%;
       padding-bottom: 16%;
       text-align: left;
 
@@ -51,7 +60,7 @@ class PsuBlock extends LitElement {
 
     :host([block2]) .block {
       margin-top: 20px;
-      background-color: #fff;
+      background-color: var(--whiteout);
       padding: 0px 14px 0px 14px;
       width: 375px;
       height: 342.250px;
@@ -63,16 +72,13 @@ class PsuBlock extends LitElement {
       font-size: 1rem;
       line-height: 1.5rem;
       width: 94%;
-      color: #001e44
+      color: var(--nittanynavy);
     }
 
     :host([block2]) .infoBlock b {
-      padding: 0 3.75rem;
       background-color: #1e407c;
       height: 3px;
       font-weight: 700;
-      margin-top: 1rem;
-      margin-bottom: 0.75rem;
       display: block;
     }
 
@@ -102,7 +108,7 @@ class PsuBlock extends LitElement {
       text-align: left;
       padding-right: 14%;
       padding-left: 14%;
-      padding-top: 14%;
+      padding-top: 25%;
       padding-bottom: 14%;
     }
 
@@ -125,12 +131,17 @@ class PsuBlock extends LitElement {
       padding-right: 14%;
       padding-left: 14%;
       padding-top: 14%;
-      padding-bottom: 13%;
+      padding-bottom: 14%;
     }
-
+    
     :host([url]) .infoBlock svg {
       padding-left: 350px;
       padding-bottom: 50%;
+    }
+    .svg.url:hover {
+      fill: #0e1a25;
+      background:#45abff;
+      transform: scale(1.5);
     }
 
 
@@ -152,7 +163,7 @@ class PsuBlock extends LitElement {
       text-align: left;
       padding-right: 14%;
       padding-left: 14%;
-      padding-top: 14%;
+      padding-top: 25%;
       padding-bottom: 14%;
     }
 
@@ -178,7 +189,6 @@ class PsuBlock extends LitElement {
       padding-top: 14%;
       padding-bottom: 13%;
     }
-
   `;
 
   constructor() {
@@ -221,6 +231,7 @@ class PsuBlock extends LitElement {
           ` :html` `}
         </div>
       </div>
+    </div>
     `;
   }
 }
