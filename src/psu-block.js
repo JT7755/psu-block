@@ -7,6 +7,7 @@ class PsuBlock extends LitElement {
     image: {type: Boolean},
 
     url: {type: String},
+    urlImage: {type: String},
     
     infoText1: {type: String},
     infoText2: {type: String},
@@ -28,31 +29,27 @@ class PsuBlock extends LitElement {
       --whiteout: #fff;
       --nittanynavy: #001e44;
       --darkgrey: #00032180;
-      --blockwidth: 369.719px;
-      --blockheight: 315.750px;
+      --blockwidth: 375px;
+      --blockheight: 342px;
       --fontsize: 32px;
       --fontweight: 700;
       --fontfam: "Roboto", sans-serif;
-      margin-left: 65px;
+      margin-left: 90px;
     }
 
     :host([block1]) .block {
       background-color: var(--beaverblue);
-      background-size: cover;
-      background-position: center;
-      background-blend-mode: multiply;
+      color: var(--whiteout);
       margin-top: 20px;
       position: relative;
-      padding: 0px 14px 0px 14px;
-      width: 375px;
-      height: 342.250px;
-      color: white;
+      width: var(--blockwidth);
+      height: var(--blockheight);
       font-size: 32px;
     }
     :host([block1]) .infoBlock h3 {
       padding-right: 14%;
       padding-left: 14%;
-      padding-top: 25%;
+      padding-top: 29%;
       padding-bottom: 16%;
       text-align: left;
 
@@ -61,44 +58,46 @@ class PsuBlock extends LitElement {
     :host([block2]) .block {
       margin-top: 20px;
       background-color: var(--whiteout);
-      padding: 0px 14px 0px 14px;
-      width: 375px;
-      height: 342.250px;
+      width: var(--blockwidth);
+      height: var(--blockheight);
       text-align: center;
       font-size: 32px;
     }
 
     :host([block2]) .infoBlock p {
-      font-size: 1rem;
-      line-height: 1.5rem;
-      width: 94%;
+      display: block;
+      padding-left: 25px;
+      font-size: 20px;
       color: var(--nittanynavy);
+      text-align: left;
     }
 
     :host([block2]) .infoBlock b {
-      background-color: #1e407c;
+      background-color: var(--beaverblue);
+      margin-left: 25px;
+      margin-right: 25px;
       height: 3px;
-      font-weight: 700;
+      font-weight: var(--fontweight);
       display: block;
     }
 
     :host([block2]) .infoBlock h3 {
-      padding-right: 14%;
-      padding-left: 14%;
+      font-size: 35px;
+      padding-top: 20%;
+      padding-left: 13%;
       text-align: left;
-      color: #001e44
+      color: var(--nittanynavy);
     }
 
     :host([block3]) .block {
-      background-color: #1e407c;
+      background-color: var(--beaverblue);
       background-size: cover;
       background-position: center;
       background-blend-mode: multiply;
       margin-top: 20px;
       position: relative;
-      padding: 0px 14px 0px 14px;
-      width: 375px;
-      height: 342.250px;
+      width: var(--blockwidth);
+      height: var(--blockheight);
       color: white;
       font-size: 32px;     
       background: linear-gradient(180deg, rgba(30,64,124,1) 0%, rgba(0,30,68,1) 65%, rgba(0,30,68,1) 100%);
@@ -108,8 +107,8 @@ class PsuBlock extends LitElement {
       text-align: left;
       padding-right: 14%;
       padding-left: 14%;
-      padding-top: 25%;
-      padding-bottom: 14%;
+      padding-top: 29%;
+      padding-bottom: 16%;
     }
 
     :host([block4]) .block {
@@ -119,38 +118,29 @@ class PsuBlock extends LitElement {
       background-position: center;
       background-blend-mode: multiply;
       margin-top: 20px;
-      position: relative;
-      padding: 0px 14px 0px 14px;
-      width: 375px;
-      height: 342.250px;
-      color: white;
+      width: var(--blockwidth);
+      height: var(--blockheight);
+      color: var(--whiteout);
       font-size: 32px;
-    }
+    } 
 
     :host([block4]) .infoBlock h3 {
       padding-right: 14%;
-      padding-left: 14%;
-      padding-top: 14%;
-      padding-bottom: 14%;
+      padding-left: 10%;
+      padding-top: 22%;
+      padding-bottom: 3%;
     }
     
     :host([url]) .infoBlock svg {
-      padding-left: 350px;
-      padding-bottom: 50%;
-    }
-    .svg.url:hover {
-      fill: #0e1a25;
-      background:#45abff;
-      transform: scale(1.5);
+      padding-left: 340px;
     }
 
 
     :host([block5]) .block {
       margin-top: 20px;
       background-color: #001e44; 
-      padding: 0px 14px 0px 14px;
-      width: 375px;
-      height: 342.250px;
+      width: var(--blockwidth);
+      height: var(--blockheight);
       text-align: center;
       color: white;
       font-size: 32px;
@@ -169,25 +159,22 @@ class PsuBlock extends LitElement {
 
     :host([block6]) .block {
       margin-top: 20px;
-      background-color: rgba(0, 3, 33, 0.5); 
       background-image: url(https://www.psu.edu/psu-edu-assets/images/power-facts/data-digest.jpg);
+      background-color: rgba(0, 3, 33, 0.5); 
       background-size: cover;
       background-position: center;
       background-blend-mode: multiply;
-      position: relative;
-      padding: 0px 14px 0px 14px;
-      width: 375px;
-      height: 342.250px;
-      color: white;
+      width: var(--blockwidth);
+      height: var(--blockheight);
+      color: var(--whiteout);
       font-size: 32px;
     }
 
     :host([block6]) .infoBlock h3 {
-      text-align: left;
       padding-right: 14%;
-      padding-left: 14%;
-      padding-top: 14%;
-      padding-bottom: 13%;
+      padding-left: 10%;
+      padding-top: 22%;
+      padding-bottom: 3%;
     }
   `;
 
@@ -197,6 +184,7 @@ class PsuBlock extends LitElement {
     this.infoText2 = this.infoText2 || "default";
 
     this.url = null;
+    this.urlImage = null;
   }
 
   render() {
