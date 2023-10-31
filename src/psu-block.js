@@ -113,7 +113,6 @@ class PsuBlock extends LitElement {
 
     :host([block4]) .block {
       background-color: rgba(0, 3, 33, 0.5); 
-      background-image: url(https://www.psu.edu/psu-edu-assets/images/power-facts/penn-state-tuition.jpg);
       background-size: cover;
       background-position: center;
       background-blend-mode: multiply;
@@ -133,6 +132,12 @@ class PsuBlock extends LitElement {
     
     :host([url]) .infoBlock svg {
       padding-left: 340px;
+    }
+
+    :host([block4]) svg:hover,
+    :host([block4]) svg:focus {
+      width: 32px;
+      height: 32px;
     }
 
 
@@ -159,7 +164,6 @@ class PsuBlock extends LitElement {
 
     :host([block6]) .block {
       margin-top: 20px;
-      background-image: url(https://www.psu.edu/psu-edu-assets/images/power-facts/data-digest.jpg);
       background-color: rgba(0, 3, 33, 0.5); 
       background-size: cover;
       background-position: center;
@@ -176,6 +180,12 @@ class PsuBlock extends LitElement {
       padding-top: 22%;
       padding-bottom: 3%;
     }
+
+    :host([block6]) svg:hover,
+    :host([block6]) svg:focus {
+      width: 32px;
+      height: 32px;
+    }
   `;
 
   constructor() {
@@ -189,7 +199,7 @@ class PsuBlock extends LitElement {
 
   render() {
     return html`
-      <div class="block">
+      ${this.urlImage ? html `<div class="block" style='background-image: url("${this.urlImage}");'>
         <div class="infoBlock">
           <h3>${this.infoText1}</h3>
             <p>${this.gearBlock ? html`<b></b> <p> ${this.infoText2} </p>` : html` `}</p>
@@ -218,8 +228,12 @@ class PsuBlock extends LitElement {
           </a>
           ` :html` `}
         </div>
-      </div>
+      </div>` : html` <div class="block">
+        <div class="infoBlock">
+          <h3> ${this.infoText1}</h3>
+          <p> ${this.gearBlock ? html `<b></b> <p> ${this.infoText2} </p> `: html ` `}</p>
     </div>
+  </div> `}
     `;
   }
 }
