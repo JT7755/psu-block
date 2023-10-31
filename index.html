@@ -16,35 +16,27 @@
       background-color: #ededed;
     }
 
-    @media (min-width: 1080px){
-      .blockContainer{
+    @media screen and (min-width: 1080px){
+      .blockContainer {
+        max-width: 900px;
+        row-gap: 15px;
         display: grid;
-        grid-gap: 300px;
-        grid-template-columns: repeat(3, 100px);
-        grid-template-rows: repeat(3, 75px);
+        grid-gap: 90px;
+        max-width: 100px;
+        grid-template-columns: repeat(3, 300px);
+        grid-template-rows: repeat(3, 275px);
       }
     }
-
-    @media screen and (min-width: 0px) and (max-width: 768px){
-      .blockContainer {
-        display: grid;
-        grid-gap: 300px;
-        max-width: 300px;
-        grid-template-columns: repeat(1, 100px);
-        grid-template-rows: repeat(9, 75px);
-      }
 
     @media (min-width: 768px) and (max-width: 1080px) {
       .blockContainer {
         display: grid;
-        grid-gap: 300px;
+        grid-gap: 600px;
         max-width: 600px;
         grid-template-columns: repeat(2, 600px);
         grid-template-rows: repeat(5, 600px);
       }
-    }
-    }
-
+    } 
   </style>
   <title>psu-block</title>
 </head>

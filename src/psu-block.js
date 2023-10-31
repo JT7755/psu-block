@@ -28,7 +28,6 @@ class PsuBlock extends LitElement {
       --beaverblue: #1e407c;
       --whiteout: #fff;
       --nittanynavy: #001e44;
-      --darkgrey: #00032180;
       --blockwidth: 375px;
       --blockheight: 342px;
       --fontsize: 32px;
@@ -44,15 +43,15 @@ class PsuBlock extends LitElement {
       position: relative;
       width: var(--blockwidth);
       height: var(--blockheight);
-      font-size: 32px;
+      font-size: 28px;
     }
+
     :host([block1]) .infoBlock h3 {
-      padding-right: 14%;
+      padding-right: 18%;
       padding-left: 14%;
       padding-top: 29%;
       padding-bottom: 16%;
       text-align: left;
-
     }
 
     :host([block2]) .block {
@@ -67,14 +66,15 @@ class PsuBlock extends LitElement {
     :host([block2]) .infoBlock p {
       display: block;
       padding-left: 25px;
-      font-size: 20px;
+      margin-right: 25px;
+      font-size: 18px;
       color: var(--nittanynavy);
       text-align: left;
     }
 
     :host([block2]) .infoBlock b {
       background-color: var(--beaverblue);
-      margin-left: 25px;
+      margin-left: 24px;
       margin-right: 25px;
       height: 3px;
       font-weight: var(--fontweight);
@@ -107,7 +107,7 @@ class PsuBlock extends LitElement {
       text-align: left;
       padding-right: 14%;
       padding-left: 14%;
-      padding-top: 29%;
+      padding-top: 27%;
       padding-bottom: 16%;
     }
 
@@ -156,7 +156,7 @@ class PsuBlock extends LitElement {
 
     :host([block5]) .infoBlock h3 {
       text-align: left;
-      padding-right: 14%;
+      padding-right: 20%;
       padding-left: 14%;
       padding-top: 25%;
       padding-bottom: 14%;
@@ -232,7 +232,7 @@ class PsuBlock extends LitElement {
         <div class="infoBlock">
           <h3> ${this.infoText1}</h3>
           <p> ${this.gearBlock ? html `<b></b> <p> ${this.infoText2} </p> `: html ` `}</p>
-    </div>
+      </div>
   </div> `}
     `;
   }
